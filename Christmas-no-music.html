@@ -230,21 +230,7 @@
         box-sizing: border-box;
       }
 
-      /* Flower styling for the switch animation */
-      .flower path {
-        stroke-linecap: round;
-        stroke-linejoin: round;
-        fill-opacity: 0;
-      }
 
-      .flower {
-        display: none;
-      }
-
-      .flower .petal,
-      .flower .leaf {
-        fill-opacity: 0;
-      }
 
       @media screen and (max-width: 768px) {
         .main {
@@ -416,56 +402,9 @@
         </g>
         <circle class="sparkle" fill="url(#dotGrad)" cx="0" cy="0" r="50" />
       </g>
-
-      <!-- Flower bouquet outline to replace the tree on button click, drawn like the tree -->
-      <g class="flower" transform="translate(400 320) scale(1.0) translate(-400 -320)">
-        <!-- Main bouquet outline - multiple flower heads -->
-        <!-- Center flower -->
-        <path class="petal" d="M400 200 C 390 190 380 190 370 200 C 360 210 360 220 370 230 C 370 240 375 245 380 250 C 380 250 390 255 400 250 C 410 255 420 250 420 250 C 425 245 430 240 430 230 C 440 220 440 210 430 200 C 420 190 410 190 400 200 Z" stroke="#ff9aa2" stroke-width="3" fill="none" />
-        
-        <!-- Left flower -->
-        <path class="petal" d="M340 240 C 330 230 320 230 310 240 C 300 250 300 260 310 270 C 310 280 315 285 320 290 C 320 290 330 295 340 290 C 350 295 360 290 360 290 C 365 285 370 280 370 270 C 380 260 380 250 370 240 C 360 230 350 230 340 240 Z" stroke="#ff9aa2" stroke-width="3" fill="none" />
-        
-        <!-- Right flower -->
-        <path class="petal" d="M460 240 C 450 230 440 230 430 240 C 420 250 420 260 430 270 C 430 280 435 285 440 290 C 440 290 450 295 460 290 C 470 295 480 290 480 290 C 485 285 490 280 490 270 C 500 260 500 250 490 240 C 480 230 470 230 460 240 Z" stroke="#ff9aa2" stroke-width="3" fill="none" />
-        
-        <!-- Top left flower -->
-        <path class="petal" d="M360 210 C 350 200 340 200 330 210 C 320 220 320 230 330 240 C 330 250 335 255 340 260 C 340 260 350 265 360 260 C 370 265 380 260 380 260 C 385 255 390 250 390 240 C 400 230 400 220 390 210 C 380 200 370 200 360 210 Z" stroke="#ff9aa2" stroke-width="3" fill="none" />
-        
-        <!-- Top right flower -->
-        <path class="petal" d="M440 210 C 430 200 420 200 410 210 C 400 220 400 230 410 240 C 410 250 415 255 420 260 C 420 260 430 265 440 260 C 450 265 460 260 460 260 C 465 255 470 250 470 240 C 480 230 480 220 470 210 C 460 200 450 200 440 210 Z" stroke="#ff9aa2" stroke-width="3" fill="none" />
-        
-        <!-- Bottom left flower -->
-        <path class="petal" d="M320 280 C 310 270 300 270 290 280 C 280 290 280 300 290 310 C 290 320 295 325 300 330 C 300 330 310 335 320 330 C 330 335 340 330 340 330 C 345 325 350 320 350 310 C 360 300 360 290 350 280 C 340 270 330 270 320 280 Z" stroke="#ff9aa2" stroke-width="3" fill="none" />
-        
-        <!-- Bottom right flower -->
-        <path class="petal" d="M480 280 C 470 270 460 270 450 280 C 440 290 440 300 450 310 C 450 320 455 325 460 330 C 460 330 470 335 480 330 C 490 335 500 330 500 330 C 505 325 510 320 510 310 C 520 300 520 290 510 280 C 500 270 490 270 480 280 Z" stroke="#ff9aa2" stroke-width="3" fill="none" />
-        
-        <!-- Stems -->
-        <path class="stem" d="M400 250 L 400 380" stroke="#cb9866" stroke-width="8" fill="none" />
-        <path class="stem" d="M340 290 C 340 320 350 350 370 380" stroke="#cb9866" stroke-width="6" fill="none" />
-        <path class="stem" d="M460 290 C 460 320 450 350 430 380" stroke="#cb9866" stroke-width="6" fill="none" />
-        <path class="stem" d="M320 330 C 320 350 340 365 360 380" stroke="#cb9866" stroke-width="5" fill="none" />
-        <path class="stem" d="M480 330 C 480 350 460 365 440 380" stroke="#cb9866" stroke-width="5" fill="none" />
-        <path class="stem" d="M360 260 C 360 290 370 340 375 380" stroke="#cb9866" stroke-width="5" fill="none" />
-        <path class="stem" d="M440 260 C 440 290 430 340 425 380" stroke="#cb9866" stroke-width="5" fill="none" />
-        
-        <!-- Gathering point and main stem -->
-        <path class="stem" d="M320 380 C 350 390 370 395 400 395 C 430 395 450 390 480 380" stroke="#cb9866" stroke-width="10" fill="none" />
-        <path class="stem" d="M400 395 L 400 540" stroke="#cb9866" stroke-width="12" fill="none" />
-        
-        <!-- Ribbon/Wrap around stems -->
-        <path class="leaf" d="M350 385 C 360 375 380 370 400 370 C 420 370 440 375 450 385 C 440 395 420 400 400 400 C 380 400 360 395 350 385 Z" stroke="#ff6b9d" stroke-width="4" fill="none" />
-        
-        <!-- Leaves -->
-        <path class="leaf" d="M370 450 C 350 440 340 420 345 400 C 350 410 360 430 370 450 Z" stroke="#cb9866" stroke-width="3" fill="none" />
-        <path class="leaf" d="M430 450 C 450 440 460 420 455 400 C 450 410 440 430 430 450 Z" stroke="#cb9866" stroke-width="3" fill="none" />
-        <path class="leaf" d="M380 480 C 360 470 350 450 355 430 C 360 440 370 460 380 480 Z" stroke="#cb9866" stroke-width="3" fill="none" />
-        <path class="leaf" d="M420 480 C 440 470 450 450 445 430 C 440 440 430 460 420 480 Z" stroke="#cb9866" stroke-width="3" fill="none" />
-      </g>
     </svg>
     <h1 id="header"></h1>
-    <button id="enterBtn" class="enter-btn">点击进入</button>
+
   </div>
     <!-- partial -->
     <script>
@@ -653,10 +592,7 @@
       visibility: "visible",
     });
 
-    gsap.set("#enterBtn", {
-      autoAlpha: 0,
-      pointerEvents: "none",
-    });
+
 
     gsap.set(sparkle, {
       transformOrigin: "50% 50%",
@@ -872,118 +808,14 @@ mainTl
     },
     "+=1"
   )
-  .to(
-    "#enterBtn",
-    {
-      duration: 0.4,
-      autoAlpha: 1,
-      pointerEvents: "auto",
-      ease: "power1.out",
-    },
-    "+=0.4"
-  );
+;
 /* .to('.whole', {
 opacity: 0
 }, '+=2') */
     }
 
 
-    let flowerDrawn = false;
-    function drawFlower() {
-      if (flowerDrawn) return;
-      flowerDrawn = true;
-
-      flowerTl = gsap.timeline();
-      flowerTl
-        .to(
-          ".whole",
-          {
-            duration: 0.6,
-            opacity: 0,
-            ease: "power2.out",
-          }
-        )
-        .set(
-          ".flower",
-          {
-            display: "block",
-          },
-          "<"
-        )
-        .from(
-          ".stem",
-          {
-            duration: 2.5,
-            drawSVG: "0% 0%",
-            ease: "linear",
-            stagger: 0.12,
-          },
-          "-=1.5"
-        )
-        .from(
-          ".leaf",
-          {
-            duration: 2,
-            drawSVG: "0% 0%",
-            ease: "linear",
-            stagger: 0.1,
-          },
-          "-=1.4"
-        )
-        .to(
-          ".leaf",
-          {
-            duration: 0.8,
-            fillOpacity: 1,
-            ease: "power1.out",
-            stagger: 0.08,
-          },
-          "-=1.2"
-        )
-        .from(
-          ".bloom .petal",
-          {
-            duration: 2,
-            drawSVG: "0% 0%",
-            ease: "linear",
-            stagger: 0.06,
-          },
-          "-=0.9"
-        )
-        .to(
-          ".bloom .petal",
-          {
-            duration: 1.2,
-            fillOpacity: 1,
-            ease: "power1.out",
-            stagger: 0.05,
-          },
-          "-=1"
-        )
-        .to(
-          ".center",
-          {
-            duration: 1,
-            scale: 1,
-            ease: "elastic.out(1,0.5)",
-            stagger: 0.06,
-          },
-          "-=0.8"
-        )
-        .to(
-          ".sparkle",
-          {
-            duration: 1,
-            opacity: 0.15,
-            ease: "power1.out",
-          },
-          "<"
-        );
-    }
-
-
-
-function drawStars() {
+    function drawStars() {
       let canvas = document.getElementById("stars"),
         ctx = canvas.getContext("2d"),
         w = (canvas.width = window.innerWidth),
@@ -1118,9 +950,30 @@ function drawStars() {
     }
 
 
+    // 获取当前时间
+    function getCurrentTime() {
+      const now = new Date();
+      const year = now.getFullYear();
+      const month = String(now.getMonth() + 1).padStart(2, '0');
+      const day = String(now.getDate()).padStart(2, '0');
+      const hours = String(now.getHours()).padStart(2, '0');
+      const minutes = String(now.getMinutes()).padStart(2, '0');
+      return `现在是${year}年${month}月${day}日 ${hours}:${minutes}`;
+    }
+
     let myLabels = [
-      "最最亲爱的葛欣怡",
-      "Merry Christmas Eve!"
+      "🎄✨🎄✨🎅🎅🎅🎄✨🎄✨",
+      "我们最最最亲爱的葛欣怡同学！",
+      getCurrentTime(),
+      "平安夜快乐！",
+      "也许我不能送你一束花",
+      "但我可以直接送你一棵圣诞树",
+      "愿你永远被世界的温柔包围",
+      "永远被偏爱，被珍惜",
+      "永远闪闪发光",
+      "我永远_你！",
+      "🎄✨🎄✨🎅🎅🎅🎄✨🎄✨",
+      "---- MJ 2025年12月24日",
     ];
     
     function init() {
@@ -1136,7 +989,7 @@ function drawStars() {
       for(let i = 0; i < myLabels.length; i++) {
         setTimeout(() => {
           labels[i].classList.add("show");
-        }, 1000 * i);
+        }, 2000 * i);
       }      
     }
         init();
@@ -1144,15 +997,8 @@ function drawStars() {
         drawStar();
         drawMain();
         mainTl.add(starTl, 0);
-        gsap.globalTimeline.timeScale(1.5); //  圣诞树开始绘画时小光点动画的绘画速率,越大越快
+        gsap.globalTimeline.timeScale(0.5); //  圣诞树开始绘画时小光点动画的绘画速率,越大越快
         drawStars();
-        
-        // 按钮点击事件
-        document.getElementById('enterBtn').addEventListener('click', function() {
-          this.disabled = true;
-          this.textContent = '正在绘制...';
-          drawFlower();
-        });
   
   </script>
 </html>
